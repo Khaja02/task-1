@@ -1,0 +1,6 @@
+fetch('/api/get_dynamic_data') // Replace with your data source URL
+    .then(response => response.json())
+    .then(data => {
+        const dynamicContent = document.getElementById('dynamic-content');
+        dynamicContent.textContent = `Dynamic Data: ${data.value}`;
+    });
